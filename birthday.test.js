@@ -1,9 +1,9 @@
-const isBirthday = require('./birthday');
+const isBirthday = require("./birthday");
 
-describe('Checks if today is birthdate', () => {
+describe("Checks if today is birthdate", () => {
   let _Date; // eslint-disable-line
   beforeAll(() => {
-    _Date = Date; // Save origial date module
+    _Date = Date; // Save original date module
   });
 
   afterAll(() => {
@@ -13,10 +13,10 @@ describe('Checks if today is birthdate', () => {
 
   beforeEach(() => {
     // Set a fixed date
-    Date.now = jest.fn(() => new Date('01 Jan 2018').valueOf());
+    Date.now = jest.fn(() => new Date("01 Jan 2018").valueOf());
   });
 
-  test('Correctly asserts birthday', () => {
-    expect(isBirthday('2018-01-01')).toBe(true);
+  test("Correctly asserts birthday", () => {
+    expect(isBirthday("2018-01-01")).toBe(true);
   });
 });
